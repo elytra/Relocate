@@ -1,0 +1,11 @@
+{
+  "id": "relocate",
+  "name": "Relocate",
+  "version": "0.1",
+  "authors": [
+  ],
+  "listeners": [
+    "net.tinzin.relocate.Relocate",
+    "net.tinzin.relocate.RelocateCore"
+  ]
+}
