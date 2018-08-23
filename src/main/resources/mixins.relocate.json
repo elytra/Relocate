@@ -3,8 +3,9 @@
   "minVersion": "0.7.7",
   "compatibilityLevel": "JAVA_8",
   "target": "@env(DEFAULT)",
-  "package": "com.example.examplemod.mixins",
-  "refmap": "mixins.examplemod.refmap.json",
+  "package": "net.tinzin.relocate.mixin",
+  "refmap": "mixins.relocate.refmap.json",
   "mixins": [
+    "MixinEntityBoat"
   ]
 }

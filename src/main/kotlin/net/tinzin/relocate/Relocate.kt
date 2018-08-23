@@ -16,7 +16,7 @@ class Relocate : BlockAdder, ItemAdder {
         //Item.registerItem(ResourceLocation("examplemod:example_item"), EXAMPLE_ITEM)
     }
 
-    fun registerTileEntityTypes() {
+    override fun registerTileEntityTypes() {
         //EXAMPLE_TE = TileEntityType.registerTileEntityType("examplemod:example_block", TileEntityType.Builder.create(???({ TileEntityExample() })))
     }
 
