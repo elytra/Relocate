@@ -9,24 +9,24 @@ import org.dimdev.rift.listener.TIleEntityTypeAdder
 class Relocate : BlockAdder, ItemAdder, TileEntityTypeAdder {
 
     override fun registerBlocks() {
-        Block.register(ResourceLocation("examplemod:example_block"), EXAMPLE_BLOCK)
+        //Block.register(ResourceLocation("examplemod:example_block"), EXAMPLE_BLOCK)
     }
 
     override fun registerItems() {
-        Item.registerItemBlock(EXAMPLE_BLOCK, ItemGroup.DECORATION)
-        Item.registerItem(ResourceLocation("examplemod:example_item"), EXAMPLE_ITEM)
+        //Item.registerItemBlock(EXAMPLE_BLOCK, ItemGroup.DECORATION)
+        //Item.registerItem(ResourceLocation("examplemod:example_item"), EXAMPLE_ITEM)
     }
 
     fun registerTileEntityTypes() {
-        EXAMPLE_TE = TileEntityType.registerTileEntityType("examplemod:example_block", TileEntityType.Builder.create(???({ TileEntityExample() })))
+        //EXAMPLE_TE = TileEntityType.registerTileEntityType("examplemod:example_block", TileEntityType.Builder.create(???({ TileEntityExample() })))
     }
 
     companion object {
 
-        val EXAMPLE_ITEM = Item(Item.Builder().group(ItemGroup.DECORATION).rarity(EnumRarity.RARE))
+        //val EXAMPLE_ITEM = Item(Item.Builder().group(ItemGroup.DECORATION).rarity(EnumRarity.RARE))
 
-        val EXAMPLE_BLOCK = BlockExample(Block.Builder.create(Material.ROCK, MapColor.STONE).hardnessAndResistance(2f, 3f).sound(SoundType.METAL))
+        //val EXAMPLE_BLOCK = BlockExample(Block.Builder.create(Material.ROCK, MapColor.STONE).hardnessAndResistance(2f, 3f).sound(SoundType.METAL))
 
-        var EXAMPLE_TE: TileEntityType<TileEntityExample>
+        //var EXAMPLE_TE: TileEntityType<TileEntityExample>
     }
 }
