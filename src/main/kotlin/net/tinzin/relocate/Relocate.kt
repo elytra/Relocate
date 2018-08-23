@@ -4,9 +4,8 @@ import net.minecraft.item.Item
 import net.minecraft.util.ResourceLocation
 import org.dimdev.rift.listener.BlockAdder
 import org.dimdev.rift.listener.ItemAdder
-import org.dimdev.rift.listener.TIleEntityTypeAdder
 
-class Relocate : BlockAdder, ItemAdder, TileEntityTypeAdder {
+class Relocate : BlockAdder, ItemAdder {
 
     override fun registerBlocks() {
         //Block.register(ResourceLocation("examplemod:example_block"), EXAMPLE_BLOCK)
