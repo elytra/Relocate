@@ -4,7 +4,7 @@ import net.minecraft.item.Item
 import net.minecraft.util.ResourceLocation
 import org.dimdev.rift.listener.BlockAdder
 import org.dimdev.rift.listener.ItemAdder
-import org.dimdev.rift.listener.TIleEntityTypeAdder
+import org.dimdev.rift.listener.TileEntityTypeAdder
 
 class Relocate : BlockAdder, ItemAdder, TileEntityTypeAdder {
 
@@ -17,7 +17,7 @@ class Relocate : BlockAdder, ItemAdder, TileEntityTypeAdder {
         //Item.registerItem(ResourceLocation("examplemod:example_item"), EXAMPLE_ITEM)
     }
 
-    fun registerTileEntityTypes() {
+    override fun registerTileEntityTypes() {
         //EXAMPLE_TE = TileEntityType.registerTileEntityType("examplemod:example_block", TileEntityType.Builder.create(???({ TileEntityExample() })))
     }
 
