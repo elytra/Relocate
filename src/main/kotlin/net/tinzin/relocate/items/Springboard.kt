@@ -1,4 +1,4 @@
-package net.tinzin.relocate
+package net.tinzin.relocate.items
 
 import net.minecraft.item.Item
 import net.minecraft.entity.player.EntityPlayer
