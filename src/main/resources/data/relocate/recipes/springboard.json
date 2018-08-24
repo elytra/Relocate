@@ -1,0 +1,22 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "RSR",
+    "RPR"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:firework_rocket"
+    },
+    "S": {
+      "item": "minecraft:slime_block"
+    },
+    "P": {
+      "item": "minecraft:sticky_piston"
+    }
+  },
+  "result": {
+    "item": "relocate:springboard",
+    "count": 1
+  }
+}
