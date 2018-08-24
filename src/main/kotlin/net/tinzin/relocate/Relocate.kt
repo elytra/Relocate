@@ -12,15 +12,13 @@ class Relocate : BlockAdder, ItemAdder {
     }
 
     override fun registerItems() {
+        Item.registerItem(ResourceLocation("relocate:springboard"), SPRINGBOARD)
         //Item.registerItemBlock(EXAMPLE_BLOCK, ItemGroup.DECORATION)
         //Item.registerItem(ResourceLocation("examplemod:example_item"), EXAMPLE_ITEM)
     }
 
-    override fun registerTileEntityTypes() {
-        //EXAMPLE_TE = TileEntityType.registerTileEntityType("examplemod:example_block", TileEntityType.Builder.create(???({ TileEntityExample() })))
-    }
-
     companion object {
+        val SPRINGBOARD = Springboard(Item.Builder().group(net.minecraft.item.ItemGroup.TRANSPORTATION))
 
         //val EXAMPLE_ITEM = Item(Item.Builder().group(ItemGroup.DECORATION).rarity(EnumRarity.RARE))
 
