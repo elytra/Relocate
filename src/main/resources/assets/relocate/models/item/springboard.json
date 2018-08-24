@@ -1,0 +1,10 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "relocate:item/springboard"
+  },
+  "overrides": [
+    { "predicate": { "cooldown": 0.0}, "model": "relocate:item/springboard_retracted" },
+    { "predicate": { "cooldown": 0.8}, "model": "relocate:item/springboard_extended" }
+  ]
+}
