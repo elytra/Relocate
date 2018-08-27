@@ -7,9 +7,7 @@ import net.minecraft.block.state.IBlockState
 import net.minecraft.entity.Entity
 import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.init.MobEffects
-import net.minecraft.potion.Potion
 import net.minecraft.potion.PotionEffect
-import net.minecraft.potion.PotionUtils
 import net.minecraft.util.BlockRenderLayer
 import net.minecraft.util.EnumFacing
 import net.minecraft.util.math.BlockPos
@@ -17,8 +15,6 @@ import net.minecraft.util.math.shapes.VoxelShape
 import net.minecraft.world.IBlockReader
 import net.minecraft.world.IWorldReaderBase
 import net.minecraft.world.World
-import net.minecraft.block.material.MapColor
-import net.minecraft.block.material.Material
 
 
 class SpeedDust : Block {

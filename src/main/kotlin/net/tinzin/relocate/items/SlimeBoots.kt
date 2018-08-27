@@ -9,7 +9,7 @@ import net.minecraft.item.crafting.Ingredient
 import net.minecraft.util.IItemProvider
 import net.minecraft.util.SoundEvent
 
-class SlimeBoots : ItemArmor {
+class SlimeBoots/* : ItemArmor */{
     private val SLIME = object : IArmorMaterial{
         override fun func_200896_a(p_200896_1_: EntityEquipmentSlot): Int {
             return 0

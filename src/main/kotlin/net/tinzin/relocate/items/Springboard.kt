@@ -2,15 +2,12 @@ package net.tinzin.relocate.items
 
 import net.minecraft.item.Item
 import net.minecraft.entity.player.EntityPlayer
-import net.minecraft.init.Blocks
 import net.minecraft.init.Items
 import net.minecraft.init.SoundEvents
 import net.minecraft.item.IItemTier
-import net.minecraft.item.ItemTier
 import net.minecraft.item.ItemTiered
 import net.minecraft.item.crafting.Ingredient
 import net.minecraft.util.IItemProvider
-import net.minecraft.util.SoundEvent
 
 class Springboard(builder: Item.Builder) : ItemTiered(PistonTier(), builder) {
     val VELOCITY = 3.0 // arcane speed units
