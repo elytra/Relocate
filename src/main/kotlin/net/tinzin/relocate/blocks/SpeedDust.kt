@@ -35,7 +35,7 @@ class SpeedDust : Block {
     }
 
     /*override fun getCollisionShape(p_getCollisionShape_1_: IBlockState?, p_getCollisionShape_2_: IBlockReader?, p_getCollisionShape_3_: BlockPos?): VoxelShape {
-        return Block.makeCuboidShape(0.0,0.0,0.0,16.0,8.0,16.0)
+        return Block.makeCuboidShape(0.0,0.0,0.0,16.0,8.0,16.0) //sadly this makes the block solid, despite all reason
     }*/
 
     override fun isValidPosition(state: IBlockState, worldreader: IWorldReaderBase, position: BlockPos): Boolean {
