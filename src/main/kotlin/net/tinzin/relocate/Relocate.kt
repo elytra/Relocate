@@ -28,17 +28,10 @@ class Relocate : BlockAdder, ItemAdder {
     }
 
     companion object {
-        val DUST = Material.Builder(MapColor.AIR).notSolid().doesNotBlockMovement().build()
-
-
         val SPRINGBOARD = Springboard(Item.Builder().group(net.minecraft.item.ItemGroup.TRANSPORTATION))
-
+        val DUST = Material.Builder(MapColor.AIR).notSolid().doesNotBlockMovement().build()
         val SPEEDDUST = SpeedDust(Block.Builder.create(DUST).doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.SAND))
-
         //val EXAMPLE_ITEM = Item(Item.Builder().group(ItemGroup.DECORATION).rarity(EnumRarity.RARE))
-
-        //val EXAMPLE_BLOCK = BlockExample(Block.Builder.create(Material.ROCK, MapColor.STONE).hardnessAndResistance(2f, 3f).sound(SoundType.METAL))
-
         //var EXAMPLE_TE: TileEntityType<TileEntityExample>
     }
 }
