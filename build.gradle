@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.dimdev:rift:1.0.4-52:dev'
+    implementation 'org.dimdev:rift:1.0.4-74:dev'
     implementation 'com.github.InsomniaKitten:Riftlin:0.1.0'
 }
 
