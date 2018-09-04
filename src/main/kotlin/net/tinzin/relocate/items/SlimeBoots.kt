@@ -9,9 +9,9 @@ import net.minecraft.item.crafting.Ingredient
 import net.minecraft.util.IItemProvider
 import org.dimdev.rift.util.ArmorMaterialImpl
 
-class SlimeBoots : ItemArmor {
-    constructor(builder : Item.Builder) : super(ArmorMaterialImpl("slime",0,
-    IntArray(4){0}, 0, SoundEvents.BLOCK_SLIME_BLOCK_PLACE,0f)
-            {Ingredient.fromItems(IItemProvider { Items.SLIME_BALL })},
-            EntityEquipmentSlot.FEET,builder)
+class SlimeBoots(builder: Item.Builder, damageArray: IntArray) : ItemArmor(ArmorMaterialImpl("relocate:slime", 0,
+        damageArray, 0, SoundEvents.BLOCK_SLIME_BLOCK_PLACE, 0f)
+        { Ingredient.fromItems(IItemProvider { Items.SLIME_BALL }) },
+        EntityEquipmentSlot.FEET, builder) {
+
 }

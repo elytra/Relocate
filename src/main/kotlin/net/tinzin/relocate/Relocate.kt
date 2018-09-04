@@ -21,18 +21,18 @@ class Relocate : BlockAdder, ItemAdder {
     }
 
     override fun registerItems() {
-        Item.registerItem(ResourceLocation("relocate:springboard"), SPRINGBOARD)
-        Item.registerItem(ResourceLocation("relocate:slime_boots"), SLIMEBOOTS)
-        Item.registerItemBlock(ItemBlock(SPEEDDUST,Item.Builder().group(ItemGroup.TRANSPORTATION)))
+        Item.registerItem("relocate:springboard", SPRINGBOARD)
+        Item.registerItem("relocate:slime_boots", SLIMEBOOTS)
+        Item.register(ItemBlock(SPEEDDUST,Item.Builder().group(ItemGroup.TRANSPORTATION)))
     }
 
     companion object {
-        val DUST = Material.Builder(MapColor.AIR).notSolid().doesNotBlockMovement().build()
-
-
         val SPRINGBOARD = Springboard(Item.Builder().group(net.minecraft.item.ItemGroup.TRANSPORTATION))
-        val SLIMEBOOTS = SlimeBoots(Item.Builder().group(net.minecraft.item.ItemGroup.COMBAT))
 
+        private val damageArray : IntArray = IntArray(4){_ -> 0}
+        val SLIMEBOOTS = SlimeBoots(Item.Builder().group(net.minecraft.item.ItemGroup.COMBAT),damageArray)
+
+        private val DUST = Material.Builder(MapColor.AIR).notSolid().doesNotBlockMovement().build()
         val SPEEDDUST = SpeedDust(Block.Builder.create(DUST).doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.SAND))
 
         //var EXAMPLE_TE: TileEntityType<TileEntityExample>

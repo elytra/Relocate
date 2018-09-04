@@ -43,7 +43,7 @@ mixin {
 
 minecraft {
     version = '1.13'
-    mappings = 'snapshot_20180817'
+    mappings = 'snapshot_20180823'
     runDir = 'run'
     tweakClass = 'org.dimdev.riftloader.launch.RiftLoaderTweaker'
 }

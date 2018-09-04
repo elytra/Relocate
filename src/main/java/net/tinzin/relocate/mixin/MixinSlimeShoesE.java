@@ -3,7 +3,6 @@ package net.tinzin.relocate.mixin;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EntityType;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -30,7 +29,6 @@ public abstract class MixinSlimeShoesE extends Entity {
     void fall(CallbackInfo ci){
         if (getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == Relocate.Companion.getSLIMEBOOTS()) {
             ci.cancel();
-            playSound(SoundEvents.BLOCK_SLIME_BLOCK_FALL,1,1);
         }
     }
 }

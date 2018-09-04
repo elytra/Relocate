@@ -1,6 +1,7 @@
 package net.tinzin.relocate.mixin;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -21,10 +22,13 @@ public abstract class MixinSlimeShoes{
     locals = LocalCapture.CAPTURE_FAILEXCEPTION)
     public void onLanded(IBlockReader reader, Entity e, CallbackInfo ci){
         if(e instanceof EntityLivingBase &&
-            ((EntityLivingBase) e).getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == Relocate.Companion.getSLIMEBOOTS()
-             && !e.isSneaking()){
-            e.motionY *= -0.8;
-            ci.cancel();
+            ((EntityLivingBase) e).getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == Relocate.Companion.getSLIMEBOOTS()){
+            e.playSound(SoundType.SLIME.getFallSound(), .5f,1f);
+            //TODO add particles??
+            if(!e.isSneaking()) {
+                e.motionY *= -0.8;
+                ci.cancel();
+            }
         }
     }
 }
