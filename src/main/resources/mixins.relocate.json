@@ -7,6 +7,7 @@
   "refmap": "mixins.relocate.refmap.json",
   "mixins": [
     "MixinSlimeShoes",
-    "MixinSlimeShoesE"
+    "MixinSlimeShoesE",
+    "MixinTooQuick"
   ]
 }
