@@ -23,8 +23,6 @@ public abstract class MixinSlimeShoes{
     public void onLanded(IBlockReader reader, Entity e, CallbackInfo ci){
         if(e instanceof EntityLivingBase &&
             ((EntityLivingBase) e).getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == Relocate.Companion.getSLIMEBOOTS()){
-            e.playSound(SoundType.SLIME.getFallSound(), .5f,1f);
-            //TODO add particles??
             if(!e.isSneaking()) {
                 e.motionY *= -0.8;
                 ci.cancel();

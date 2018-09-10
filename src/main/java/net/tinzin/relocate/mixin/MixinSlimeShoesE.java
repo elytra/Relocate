@@ -1,5 +1,6 @@
 package net.tinzin.relocate.mixin;
 
+import net.minecraft.block.SoundType;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EntityType;
@@ -28,6 +29,8 @@ public abstract class MixinSlimeShoesE extends Entity {
             cancellable=true, require=1)
     void fall(CallbackInfo ci){
         if (getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == Relocate.Companion.getSLIMEBOOTS()) {
+            SoundType s = SoundType.SLIME;
+            this.playSound(s.getFallSound(), s.getVolume() * 0.5F, s.getPitch() * 0.75F);
             ci.cancel();
         }
     }
