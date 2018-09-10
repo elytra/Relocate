@@ -1,6 +1,7 @@
 package net.tinzin.relocate.mixin;
 
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.network.NetHandlerPlayServer;
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;
@@ -10,9 +11,9 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(NetHandlerPlayServer.class)
 public class MixinTooQuick {
     @Redirect(method = "processPlayer",
-    at=@At(value = "INVOKE", target = "Lnet/minecraft/entity/EntityLivingBase;isElytraFlying()Z", ordinal = 0),
+    at=@At(value = "INVOKE", target = "Lnet/minecraft/entity/player/EntityPlayerMP;isInvulnerableDimensionChange()Z", ordinal = 0),
     require = 1)
-    boolean elyRedirect(EntityLivingBase e){
+    boolean elyRedirect(EntityPlayerMP entityPlayerMP){
         return true;
     }
 
